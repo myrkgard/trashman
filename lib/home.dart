@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:trashman/service.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
 const _germanWeekdayNames = <int, String>{
   1: 'Montag',
