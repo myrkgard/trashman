@@ -20,7 +20,12 @@ jobs:
       - run: flutter format --set-exit-if-changed .
       - run: flutter analyze .
       - run: flutter build apk
-      - uses: actions/upload-artifact@v3.0.0
+      
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
